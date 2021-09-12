@@ -1,6 +1,7 @@
 // page
 
 .page {
+  z-index: 2000;
   &-body {
     &-spacer {
       &-header {
@@ -11,5 +12,9 @@
       }
     }
   }
+}
+
+.q-footer {
+  z-index: 3000;
 }
 

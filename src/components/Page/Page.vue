@@ -1,7 +1,15 @@
 <template>
     <div class="page absolute-top fit bg-white">
       <slot />
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <transition
+          appear
+          enter-active-class="animated slideInRight"
+          leave-active-class="animated slideOutRight"
+        >
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </div>
 </template>
 
