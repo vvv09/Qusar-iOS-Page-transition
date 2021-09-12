@@ -16,15 +16,26 @@
         indicator-color="transparent"
         class="text-grey"
       >
-        <q-route-tab to="/home" label="Home" icon="las la-home" />
-        <q-route-tab to="/questions" label="Questions" icon="las la-question-circle" />
+        <q-route-tab
+          v-for="navItem in store.state.navItems"
+          :key="navItem.root"
+          :to="navItem.to"
+          :label="navItem.label"
+          :icon="navItem.icon"
+        />
       </q-tabs>
     </q-footer>
   </q-layout>
 </template>
 
 <script>
-export default ({
-  name: 'MainLayout',
-})
+  import store from 'src/myStore'
+  export default ({
+    name: 'MainLayout',
+    setup() {
+      return {
+        store
+      }
+    }
+  })
 </script>
