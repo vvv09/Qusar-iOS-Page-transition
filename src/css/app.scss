@@ -1,1 +1,15 @@
-// app global css in SCSS form
+// page
+
+.page {
+  &-body {
+    &-spacer {
+      &-header {
+        height: 51px; //measure
+      }
+      &-footer {
+        height: 73px; //measure
+      }
+    }
+  }
+}
+

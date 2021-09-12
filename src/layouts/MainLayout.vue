@@ -1,12 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header bordered class="bg-white text-primary">
-      <q-toolbar>
-        <q-toolbar-title class="text-center">
-          Quasar Framework
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-header>
+
 
     <q-page-container>
       <router-view />
@@ -19,7 +13,7 @@
         indicator-color="transparent"
         class="text-grey"
       >
-        <q-route-tab label="Home" icon="las la-home" />
+        <q-route-tab to="/home" label="Home" icon="las la-home" />
       </q-tabs>
     </q-footer>
   </q-layout>
