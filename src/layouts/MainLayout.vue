@@ -17,6 +17,7 @@
         class="text-grey"
       >
         <q-route-tab to="/home" label="Home" icon="las la-home" />
+        <q-route-tab to="/questions" label="Questions" icon="las la-question-circle" />
       </q-tabs>
     </q-footer>
   </q-layout>

@@ -19,6 +19,15 @@ const routes = [
             ]
           }
         ]
+      },
+      { path: '/questions',
+        component: () => import('pages/Questions/Questions.vue'),
+        children: [
+          {
+            path: '/questions/answer',
+            component: () => import('pages/Questions/Answer.vue'),
+          }
+        ]
       }
     ]
   },

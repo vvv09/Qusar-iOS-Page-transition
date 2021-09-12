@@ -11,6 +11,7 @@
           appear
           enter-active-class="animated slideInRight"
           leave-active-class="animated slideOutRight"
+          :css="store.state.usePageTransition"
         >
           <keep-alive>
             <component
@@ -26,6 +27,7 @@
 
 <script>
   import { ref, onActivated, onDeactivated } from 'vue'
+  import store from 'src/myStore'
 
   export default {
       name: "Page",
@@ -50,6 +52,7 @@
         */
 
         return {
+          store,
           hasActiveChildPage
         }
       }
