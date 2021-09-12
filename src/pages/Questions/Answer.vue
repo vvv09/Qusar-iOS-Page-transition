@@ -3,7 +3,6 @@
     <page-header>
       <template #buttons-left>
         <page-header-button-back
-          to="/questions"
           label="Questions"
         />
       </template>

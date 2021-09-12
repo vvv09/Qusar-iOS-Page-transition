@@ -1,5 +1,6 @@
 <template>
   <q-btn
+    @click="useGoBack"
     icon="chevron_left"
     color="primary"
     rounded
@@ -10,9 +11,16 @@
 </template>
 
 <script>
-    export default {
-        name: "PageHeaderButtonBack"
+  import useGoBack from 'src/use/useGoBack'
+
+  export default {
+    name: "PageHeaderButtonBack",
+    setup() {
+      return {
+        useGoBack
+      }
     }
+  }
 </script>
 
 <style scoped>

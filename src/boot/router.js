@@ -1,7 +1,12 @@
 import { boot } from 'quasar/wrappers'
 import store from 'src/myStore'
 
-export default boot(async ( { router }) => {
+let routerInstance = null
+
+export default boot(({ router }) => {
+
+  routerInstance = router
+
   router.afterEach((to, from) => {
     let fromRootPath = `/${ from.path.split('/')[1] }`
     let toRootPath = `/${ to.path.split('/')[1] }`
@@ -29,3 +34,5 @@ export default boot(async ( { router }) => {
 
   })
 })
+
+export { routerInstance }
