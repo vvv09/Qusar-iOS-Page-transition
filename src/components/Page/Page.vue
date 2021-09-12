@@ -1,6 +1,7 @@
 <template>
     <div class="page absolute-top fit bg-white">
       <slot />
+      <router-view />
     </div>
 </template>
 

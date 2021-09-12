@@ -1,20 +1,10 @@
 <template>
   <page>
     <page-header>
-      <template #title>Home</template>
+      <template #title>Child</template>
     </page-header>
     <page-body>
       <div class="q-pa-lg">
-        <q-btn
-          to="/home/child"
-          label="Go to Child Page"
-          color="primary"
-          class="full-width q-mb-md"
-          rounded
-          unelevated
-          no-caps
-        />
-
         <p v-for="i in 20" :key="i">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto autem consectetur consequuntur dignissimos ea earum eos ex incidunt magnam, nam natus nesciunt provident quam quo reprehenderit sequi soluta totam.</p>
       </div>
     </page-body>
@@ -24,7 +14,7 @@
 <script>
 
 export default ({
-  name: 'Home'
+  name: 'Child'
 })
 
 </script>

@@ -5,7 +5,15 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', redirect: '/home' },
-      { path: '/home', component: () => import('pages/Home/Home.vue') }
+      { path: '/home',
+        component: () => import('pages/Home/Home.vue'),
+        children: [
+          {
+            path: '/home/child',
+            component: () => import('pages/Home/Child.vue'),
+          }
+        ]
+      }
     ]
   },
 
