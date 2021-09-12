@@ -2,6 +2,25 @@
 
 .page {
   z-index: 2000;
+  &-nudger {
+    transition: transform 0.4s;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0);
+      transition: background 0.4s;
+      z-index: 2000;
+      pointer-events: none;
+    }
+    &.nudge-left {
+      transform: translateX(-60px);
+      &:after {
+        background: rgba(0,0,0,0.15);
+      }
+    }
+  }
   &-header {
     &-title {
       position: absolute;
@@ -21,4 +40,14 @@
 
 .q-footer {
   z-index: 3000;
+}
+
+//transitions
+
+.slideInRight, .slideOutRight {
+  //for all browsers
+  -webkit-animation-duration: 0.4s;
+  -moz-animation-duration: 0.4s;
+  -o-animation-duration: 0.4s;
+  animation-duration: 0.4s;
 }

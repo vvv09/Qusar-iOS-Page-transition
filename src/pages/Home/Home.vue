@@ -5,6 +5,9 @@
     </page-header>
     <page-body>
       <div class="q-pa-lg">
+
+        <div class="text-h5 q-mb-md">Let's create a Badass iOS app!</div>
+
         <q-btn
           to="/home/child"
           label="Go to Child Page"

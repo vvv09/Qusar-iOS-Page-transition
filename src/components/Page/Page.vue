@@ -1,22 +1,59 @@
 <template>
-    <div class="page absolute-top fit bg-white">
-      <slot />
+    <div class="page absolute-top fit bg-white shadow-4">
+      <div
+        class="page-nudger fit"
+        :class="{ 'nudge-left' : hasActiveChildPage }"
+      >
+        <slot />
+      </div>
       <router-view v-slot="{ Component }">
         <transition
           appear
           enter-active-class="animated slideInRight"
           leave-active-class="animated slideOutRight"
         >
-          <component :is="Component" />
+          <keep-alive>
+            <component
+              @pageActivated="hasActiveChildPage = true"
+              @pageDeactivated="hasActiveChildPage = false"
+              :is="Component"
+            />
+          </keep-alive>
         </transition>
       </router-view>
     </div>
 </template>
 
 <script>
-    export default {
-        name: "Page"
-    }
+  import { ref, onActivated, onDeactivated } from 'vue'
+
+  export default {
+      name: "Page",
+      setup(props, { emit }) {
+
+        /*
+          nudge left class
+        */
+
+        let hasActiveChildPage = ref(false)
+
+        onActivated(() => {
+          emit('pageActivated')
+        })
+
+        onDeactivated(() => {
+          emit('pageDeactivated')
+        })
+
+        /*
+          return
+        */
+
+        return {
+          hasActiveChildPage
+        }
+      }
+  }
 </script>
 
 <style scoped>
