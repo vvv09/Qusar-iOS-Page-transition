@@ -13,6 +13,10 @@ export default boot(async ( { router }) => {
     } else {
       // don't use page transition
       store.state.usePageTransition = true
+
+      if (from.path === to.path && to.path !== toRootPath) {
+       router.push(toRootPath)
+      }
     }
 
     updateNavItem()
