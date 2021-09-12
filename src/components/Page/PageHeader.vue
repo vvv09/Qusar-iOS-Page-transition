@@ -6,10 +6,11 @@
     <div
       class="q-toolbar row no-wrap items-center"
     >
+      <slot name="buttons-left" />
       <div
-        class="q-toolbar__title ellipsis text-center text-body1"
+        class="page-header-title q-pl-none q-toolbar__title ellipsis absolute-center text-body1"
       >
-        <slot name="title"/>
+        <slot name="title" />
       </div>
     </div>
   </header>

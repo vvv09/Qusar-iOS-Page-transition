@@ -1,6 +1,12 @@
 <template>
   <page>
     <page-header>
+      <template #buttons-left>
+        <page-header-button-back
+          to="/home"
+          label="Home"
+        />
+      </template>
       <template #title>Child</template>
     </page-header>
     <page-body>

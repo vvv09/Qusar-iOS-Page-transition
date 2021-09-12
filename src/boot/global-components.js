@@ -4,6 +4,7 @@ const globalComponents = {
   'page': require('components/Page/Page').default,
   'page-header': require('components/Page/PageHeader').default,
   'page-body': require('components/Page/PageBody').default,
+  'page-header-button-back': require('components/Page/PageHeaderButtonBack').default,
 }
 
 export default boot(async ({ app }) => {
