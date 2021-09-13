@@ -21,6 +21,7 @@
             :src="image.url"
             no-spinner
             no-transition
+            class="no-pointer-events"
           />
           <div class="q-pa-lg">
             <div class="q-mb-md text-h5">{{ image.caption }}</div>
