@@ -57,6 +57,7 @@ const state = reactive({
       caption: 'Lighthouse at dusk',
     },
   ],
+  iosBrowserSwipingBack: false,
 })
 
 const getters = {

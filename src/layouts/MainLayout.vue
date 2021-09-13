@@ -1,5 +1,8 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout
+    view="lHh Lpr lFf"
+    :class="{ 'ios-browser-swiping-back' : store.state.iosBrowserSwipingBack }"
+  >
 
     <q-page-container>
       <router-view v-slot="{ Component }">
